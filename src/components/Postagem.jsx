@@ -23,7 +23,7 @@ export default function Postagem({ postagem, onAtualizar }) {
 
     async function handleCurtir() {
         const token = localStorage.getItem("token");
-        await fetch(`http://localhost:3000/postagens/${postagem.id}/curtidas`, {
+        await fetch(`https://nexus-nodejs-backend.onrender.com/postagens/${postagem.id}/curtidas`, {
             method: "POST",
             headers: { Authorization: `Bearer ${token}` }
         });
@@ -33,7 +33,7 @@ export default function Postagem({ postagem, onAtualizar }) {
     async function handleComentar() {
         if (!comentario.trim()) return;
         const token = localStorage.getItem("token");
-        await fetch(`http://localhost:3000/postagens/${postagem.id}/comentarios`, {
+        await fetch(`https://nexus-nodejs-backend.onrender.com/postagens/${postagem.id}/comentarios`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default function Postagem({ postagem, onAtualizar }) {
 
     async function handleDeletarComentario(id) {
         const token = localStorage.getItem("token");
-        await fetch(`http://localhost:3000/comentarios/${id}`, {
+        await fetch(`https://nexus-nodejs-backend.onrender.com/comentarios/${id}`, {
             method: "DELETE",
             headers: { Authorization: `Bearer ${token}` }
         });
