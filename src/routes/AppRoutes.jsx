@@ -8,6 +8,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PerfilUsuario from "../pages/PerfilUsuario";
 
+import FeedCurso from "../pages/FeedCurso";
+
 export default function AppRoutes() {
     return (
         <Routes>
@@ -22,6 +24,8 @@ export default function AppRoutes() {
                 <Route path="/usuarios" element={<Usuarios />} />
                 <Route path="/perfil" element={<Perfil />} />
                 <Route path="/perfil/:id" element={<PerfilUsuario />} />
+                
+                <Route path="/feedcurso" element={<FeedCurso />} />
             </Route>
 
         </Routes>
